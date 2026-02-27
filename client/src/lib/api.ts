@@ -1,6 +1,6 @@
 import { ApiResponse, Job, Application, JobFilters } from '@/types';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 
 async function apiFetch<T>(
   path: string,
