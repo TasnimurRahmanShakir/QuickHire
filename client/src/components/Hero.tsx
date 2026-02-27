@@ -12,7 +12,7 @@ export function Hero() {
            <HeroBackgroundSVG />
         </div>
 
-        <div className="container px-4 md:px-6 lg:px-[124px] mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-8 relative z-10 pb-16">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-[124px] grid lg:grid-cols-[1.1fr_0.9fr] gap-8 relative z-10 pb-16 w-full">
           
           {/* Left Side Content */}
           <div className="flex flex-col w-full max-w-[650px] z-20 mx-auto lg:mx-0">
@@ -92,35 +92,29 @@ export function Hero() {
             Companies we helped grow
           </p>
           
-          <div className="flex flex-wrap items-center justify-between gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+          <div className="flex flex-wrap items-center justify-between gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
             {/* Vodafone */}
-            <div className="flex items-center gap-2">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM28.614 26.666C28.614 31.576 24.636 35.554 19.726 35.554C14.816 35.554 10.838 31.576 10.838 26.666C10.838 22.864 13.238 19.596 16.63 18.258V18.176C12.894 17.51 10 14.248 10 10.334C10 5.424 13.978 1.446 18.888 1.446C23.798 1.446 27.776 5.424 27.776 10.334C27.776 14.28 24.814 17.484 21.044 18.176V18.258C25.432 19.006 28.614 22.518 28.614 26.666Z" fill="currentColor"/>
-              </svg>
-              <span className="text-2xl font-bold tracking-tight">vodafone</span>
+            <div className="relative w-[140px] h-[36px]">
+              <Image src="/vodafone.png" alt="Vodafone logo" fill className="object-contain" />
             </div>
             
             {/* Intel */}
-            <div className="flex items-center">
-              <span className="text-4xl font-bold tracking-tighter text-[#0071C5]">intel<span className="text-[#0071C5] text-sm align-super">®</span></span>
+            <div className="relative w-[80px] h-[32px]">
+              <Image src="/intel.png" alt="Intel logo" fill className="object-contain" />
             </div>
             
             {/* Tesla */}
-            <div className="flex items-center">
-              <svg width="120" height="16" viewBox="0 0 120 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.96 15.65H0V11.23H11.96V15.65ZM50.67 15.65H23.08V11.24H50.67V15.65ZM50.67 8.32H23.08V3.92H50.67V8.32ZM23.08 0V0.01H50.67V3.53H23.08V0ZM11.96 3.92H0V8.33H11.96V3.92ZM11.96 0H0V3.53H11.96V0ZM77.05 15.65H92.21V3.91H77.05V15.65ZM98V0.01H120V3.52H98V0.01ZM98 15.65H120V12.14H98V15.65ZM98 8.32H120V4.8H98V8.32ZM56.36 0.01H71.53V15.65H56.36V0.01ZM77.05 0H92.21V3.52H77.05V0Z"/>
-              </svg>
+            <div className="relative w-[100px] h-[24px]">
+              <Image src="/tesla.png" alt="Tesla logo" fill className="object-contain" />
             </div>
             
             {/* AMD */}
-            <div className="flex items-center">
-              <span className="text-4xl font-black tracking-tighter">AMD<span className="text-sm align-super font-normal">®</span></span>
+            <div className="relative w-[90px] h-[28px]">
+              <Image src="/amd.png" alt="AMD logo" fill className="object-contain" />
             </div>
-            
-            {/* Talkit */}
-            <div className="flex items-center gap-2">
-              <span className="text-3xl font-bold tracking-tight">Talkit</span>
+
+            <div className="relative w-[90px] h-[28px]">
+              <Image src="/talkit.png" alt="Talkit logo" fill className="object-contain" />
             </div>
           </div>
         </div>
