@@ -158,9 +158,16 @@ const latestJobs = [
 
 export function LatestJobs() {
   return (
-    <section className="relative overflow-hidden bg-[#F8F8FD]">
+    <section className="relative overflow-hidden py-20">
       {/* Background SVG */}
-      <div className="absolute top-0 right-0 w-[50%] h-full pointer-events-none opacity-20 -z-10 transform translate-x-20 -translate-y-20">
+      <div
+          className="absolute inset-0 bg-[#f8f8fd]"
+          style={{
+            clipPath:
+              "polygon(80px 0, 100% 0, 100% calc(100% - 80px), calc(100% - 80px) 100%, 0 100%, 0 80px)",
+          }}
+        />
+      <div className="absolute top-0 right-0 w-[60%] h-full pointer-events-none opacity-30 z-0 flex justify-end">
         <HeroBackgroundSVG />
       </div>
 

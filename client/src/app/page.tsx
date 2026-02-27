@@ -8,7 +8,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F8F8FD]">
+    <main className="min-h-screen">
       <Navbar />
       <Hero />
       <CategorySection />
@@ -25,11 +25,11 @@ export default function Home() {
         imageSrc="/dashboard.png"
       />
 
-      <div className="w-full mt-20">
+      <div className="w-full">
         <FeaturedJobs />
       </div>
 
-      <div className="w-full mt-20">
+      <div className="w-full">
         <LatestJobs />
       </div>
       <Footer />

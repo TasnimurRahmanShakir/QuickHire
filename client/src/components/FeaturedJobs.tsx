@@ -130,10 +130,7 @@ const featuredJobs = [
 export function FeaturedJobs() {
   return (
     <section className="relative overflow-hidden py-20 max-w-[1440px] mx-auto px-4 md:px-6 lg:px-[124px]">
-      {/* Background SVG */}
-      <div className="absolute top-0 right-0 w-[60%] h-full pointer-events-none opacity-30 z-0 flex justify-end">
-        <HeroBackgroundSVG />
-      </div>
+      
       <div className="flex justify-between items-end mb-12">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
           <span className="text-[#25324B]">Featured </span>
@@ -147,18 +144,20 @@ export function FeaturedJobs() {
         </a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Mobile: horizontal swipeable row — Desktop: 4-col grid */}
+      <div className="flex lg:grid lg:grid-cols-4 overflow-x-auto lg:overflow-visible gap-4 lg:gap-6 pb-4 lg:pb-0 snap-x snap-mandatory scroll-smooth -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-none">
         {featuredJobs.map((job) => (
-          <JobCard
-            key={job.id}
-            companyLogo={job.companyLogo}
-            jobType={job.jobType}
-            title={job.title}
-            companyName={job.companyName}
-            location={job.location}
-            description={job.description}
-            categories={job.categories}
-          />
+          <div key={job.id} className="snap-start shrink-0 w-[78vw] sm:w-[56vw] md:w-[40vw] lg:w-auto">
+            <JobCard
+              companyLogo={job.companyLogo}
+              jobType={job.jobType}
+              title={job.title}
+              companyName={job.companyName}
+              location={job.location}
+              description={job.description}
+              categories={job.categories}
+            />
+          </div>
         ))}
       </div>
     </section>
