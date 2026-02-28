@@ -5,7 +5,7 @@ import { Menu } from "lucide-react";
 
 export function Navbar() {
   return (
-    <header className="w-full h-[90px] absolute top-0 left-0 right-0 z-50 flex items-center">
+    <header className="w-full h-[90px] absolute top-0 left-0 right-0 z-50 bg-transparent flex items-center">
       <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between px-4 md:px-6 lg:px-[124px]">
         <div className="flex items-center gap-10">
           <Link href="/" className="flex items-center gap-2">

@@ -8,7 +8,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen relative flex flex-col">
       <Navbar />
       <Hero />
       <CategorySection />
@@ -33,6 +33,6 @@ export default function Home() {
         <LatestJobs />
       </div>
       <Footer />
-    </main>
+    </div>
   );
 }

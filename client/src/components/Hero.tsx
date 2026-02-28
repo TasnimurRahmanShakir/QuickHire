@@ -54,10 +54,10 @@ export function Hero() {
               </Button>
             </div>
 
-            <p className="mt-5 text-[14px] md:text-[16px] text-[#515B6F] flex flex-col md:block">
-              <span className="mb-1 md:mb-0 block md:inline text-[#25324B]">Popular : </span>
+            <div className="mt-5 text-[14px] md:text-[16px] text-[#515B6F] flex flex-col md:flex-row md:items-center">
+              <span className="mb-1 md:mb-0 text-[#25324B]">Popular :&nbsp;</span>
               <span className="font-medium text-[#515B6F]">UI Designer, UX Researcher, Android, Admin</span>
-            </p>
+            </div>
           </div>
 
           {/* Spacer for Grid to keep left content constrained */}

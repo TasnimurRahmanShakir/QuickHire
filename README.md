@@ -28,6 +28,8 @@ QuickHire lets employers post jobs and candidates browse/apply for them. The pro
 | `server/` | REST API (Node/Express) | 5000 |
 | `client/` | Next.js frontend        | 3000 |
 
+> **Update:** The client application is now fully integrated with the backend API! All job listings, categories, featured/latest lists, and applications fetch real data dynamically from the database using Next.js async Server Components.
+
 ---
 
 ## 2. Tech Stack
@@ -67,7 +69,8 @@ Qtec/
 │   ├── public/                    # Static assets (images, icons)
 │   └── src/
 │       ├── app/                   # Next.js App Router pages
-│       │   ├── layout.tsx         # Root layout (fonts, global styles)
+│       │   ├── icon.svg           # Dynamic App Favicon
+│       │   ├── layout.tsx         # Root layout (fonts, global styles, metadata)
 │       │   ├── page.tsx           # Home page (/)
 │       │   ├── globals.css        # Global CSS
 │       │   ├── jobs/
@@ -413,10 +416,10 @@ Contains all database queries via Prisma. No HTTP logic here.
 | --------------------- | ----------------------------------------------------- |
 | `Navbar.tsx`          | Top navigation bar with mobile hamburger menu         |
 | `Hero.tsx`            | Landing hero section with search bar and popular tags |
-| `CategorySection.tsx` | Grid of job category cards                            |
+| `CategorySection.tsx` | Dynamic grid of job categories with real API counts   |
 | `CategoryCard.tsx`    | Single category card with icon and label              |
-| `FeaturedJobs.tsx`    | Highlighted featured job listings fetched from API    |
-| `LatestJobs.tsx`      | Latest job listings fetched from API                  |
+| `FeaturedJobs.tsx`    | Async Server Component fetching/displaying real data  |
+| `LatestJobs.tsx`      | Async Server Component fetching/displaying real data  |
 | `LatestJobCard.tsx`   | Individual card for latest jobs display               |
 | `JobCard.tsx`         | Reusable job card component                           |
 | `ApplyForm.tsx`       | Application form — submits `POST /api/applications`   |
