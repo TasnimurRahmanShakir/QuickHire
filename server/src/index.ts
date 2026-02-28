@@ -10,7 +10,13 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 // ── Middleware ─────────────────────────────────────────────────────────────
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3000' }));
+app.use(cors({
+    origin: [
+        'http://localhost:3000',
+        'https://quick-hire-one.vercel.app'
+    ],
+    credentials: true
+}));
 app.use(express.json());
 
 // ── Routes ─────────────────────────────────────────────────────────────────
